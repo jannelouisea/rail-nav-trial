@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {ROUTES} from './src/constants/ScreenMapping';
 
 // Icons
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -10,14 +11,6 @@ import HomeScreen from './src/screens/home/HomeScreen';
 import NewsScreen from './src/screens/news/NewsScreen';
 import BillsScreen from './src/screens/bills/BillsScreen';
 import ProposalsScreen from './src/screens/proposals/ProposalsScreen';
-
-// Route Names
-const ROUTES = {
-  HOME: "Home",
-  NEWS: "News",
-  BILLS: "Bills",
-  PROPOSALS: "Proposals"
-};
 
 const Root = createBottomTabNavigator();
 
@@ -42,7 +35,7 @@ export default function App() {
       }
     })
     }
-    tabBarOptions={{showLabel: false}}
+    tabBarOptions={{showLabel: false, activeTintColor: 'tomato', inactiveTintColor: 'gray',}}
     >
       <Root.Screen 
         name={ROUTES.HOME}

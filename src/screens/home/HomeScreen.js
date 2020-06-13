@@ -1,9 +1,11 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = () => {
     return (
-        <Text>This is the Home screen</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>This is the Home screen</Text>
+        </View>
     );
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const ProposalsScreen = () => {
     return (
-        <Text>This is the Proposals screen</Text>
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>This is the Proposals screen</Text>
+        </View>
     );
 };
 

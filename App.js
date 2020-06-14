@@ -1,7 +1,8 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {ROUTES} from './src/constants/ScreenMapping';
+import { MAIN_ROUTES, SECONDARY_ROUTES } from './src/constants/ScreenMapping';
+import RailTabBar from './src/nav/RailTabBar';
 
 // Icons
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -12,9 +13,22 @@ import NewsScreen from './src/screens/news/NewsScreen';
 import BillsScreen from './src/screens/bills/BillsScreen';
 import ProposalsScreen from './src/screens/proposals/ProposalsScreen';
 
-const Root = createBottomTabNavigator();
+//const Root = createBottomTabNavigator();
+const MainTab = createBottomTabNavigator();
 
 export default function App() {
+  return (
+    <NavigationContainer>
+      <MainTab.Navigator tabBar={props => <RailTabBar {...props} />}>
+        <MainTab.Screen name={MAIN_ROUTES.HOME} component={NewsScreen}/>
+        <MainTab.Screen name={MAIN_ROUTES.NEWS} component={NewsScreen}/>
+        <MainTab.Screen name={MAIN_ROUTES.BILLS} component={BillsScreen}/>
+        <MainTab.Screen name={MAIN_ROUTES.PROPOSALS} component={ProposalsScreen}/>
+      </MainTab.Navigator>
+    </NavigationContainer>
+  );
+
+  /* Navigation Trial 1
   return (
     <NavigationContainer>
     <Root.Navigator initialRouteName="Home"
@@ -46,5 +60,5 @@ export default function App() {
       <Root.Screen name={ROUTES.PROPOSALS} component={ProposalsScreen}/>
     </Root.Navigator>
     </NavigationContainer>
-  );
+  );*/
 }

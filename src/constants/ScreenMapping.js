@@ -1,8 +1,12 @@
-const ROUTES = {
+const MAIN_ROUTES = {
   HOME: "Home",
   NEWS: "News",
   BILLS: "Bills",
   PROPOSALS: "Proposals"
 };
 
-export {ROUTES};
+const SECONDARY_ROUTES = {
+    PROFILE: "Profile"
+};
+
+export { MAIN_ROUTES, SECONDARY_ROUTES };

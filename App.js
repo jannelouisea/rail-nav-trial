@@ -20,7 +20,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <MainTab.Navigator tabBar={props => <RailTabBar {...props} />}>
-        <MainTab.Screen name={MAIN_ROUTES.HOME} component={NewsScreen}/>
+        <MainTab.Screen name={MAIN_ROUTES.HOME} component={HomeScreen}/>
         <MainTab.Screen name={MAIN_ROUTES.NEWS} component={NewsScreen}/>
         <MainTab.Screen name={MAIN_ROUTES.BILLS} component={BillsScreen}/>
         <MainTab.Screen name={MAIN_ROUTES.PROPOSALS} component={ProposalsScreen}/>

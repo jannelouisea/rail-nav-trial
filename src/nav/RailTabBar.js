@@ -18,21 +18,21 @@ const RailTabBar = ({state, descriptors, navigation}) => {
     return (
         <View style={styles.view}>
             <TouchableOpacity>
-                <Icon name="home" size={30}/>
+                <Icon name="home" size={25}/>
             </TouchableOpacity>
             <TouchableOpacity>
-                <Icon name="newspaper" size={30}/>
+                <Icon name="newspaper" size={25}/>
             </TouchableOpacity>
             <TouchableOpacity>
                 <View style={styles.circleView}>
-                    <Icon name="apps" size={30} color="white"/>
+                    <Icon name="apps" size={25} color="white"/>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>
-                <Icon name="vote" size={30}/>
+                <Icon name="vote" size={25}/>
             </TouchableOpacity>
             <TouchableOpacity>
-                <Icon name="lightbulb-outline" size={30}/>
+                <Icon name="lightbulb-outline" size={25}/>
             </TouchableOpacity>
         </View>
     );
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 55,
         alignItems: 'center',
-        justifyContent: 'space-evenly'
+        justifyContent: 'space-around'
     },
     circleView: {
         // Attributes for inner circle

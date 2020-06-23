@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet,SafeAreaView} from 'react-native';
+import { MAIN_ROUTES, SECONDARY_ROUTES } from '../constants/ScreenMapping';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -20,21 +21,21 @@ const RailTabBar = ({state, descriptors, navigation}) => {
 
     return (
         <SafeAreaView style={styles.view}>
-            <TouchableOpacity>
+            <TouchableOpacity style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.HOME)}}>
                 <Home size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity  style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.NEWS)}}>
                 <Icon name="newspaper" size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity activeOpacity={.8}>
+            <TouchableOpacity  style={styles.navButtons} activeOpacity={.8}>
                 <View style={styles.circleView}>
                     <Apps size={25} fill="#FFFFFF"/>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity  style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.BILLS)}}>
                 <Icon name="vote" size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity  style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.PROPOSALS)}}>
                 <Icon name="lightbulb-outline" size={25}/>
             </TouchableOpacity>
         </SafeAreaView>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     view: {
         flexDirection: 'row',
         height: 75,
-        alignItems: 'center',
+        alignItems: 'center',  // center vertically
         justifyContent: 'space-around',
     },
     circleView: {
@@ -67,6 +68,11 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0, height: 5},
         shadowOpacity: .1,
         shadowRadius: 3,
+    },
+    // Making each nav button extends to it's fullest length
+    navButtons: {
+        flex: 1,
+        alignItems: 'center' // center horizontally in the touchableOpacity button
     }
 });
 

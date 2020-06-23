@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 
 //import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Home from '../assets/svg/home.svgx';
 
 const RailTabBar = ({state, descriptors, navigation}) => {
     /*
@@ -18,7 +19,7 @@ const RailTabBar = ({state, descriptors, navigation}) => {
     return (
         <View style={styles.view}>
             <TouchableOpacity>
-                <Icon name="home" size={25}/>
+                <Home />
             </TouchableOpacity>
             <TouchableOpacity>
                 <Icon name="newspaper" size={25}/>

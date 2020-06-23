@@ -6,7 +6,7 @@ module.exports = (async () => {
 			sourceExts, 
 			assetExts 
 		}  
-	} = await getDefaultConfig(); 
+    } = await getDefaultConfig();
 
 	return {
 		transformer: {      

@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet,SafeAreaView} from 'react-native';
 
-//import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Home from '../assets/svg/home.svgx';
 
@@ -17,7 +16,7 @@ const RailTabBar = ({state, descriptors, navigation}) => {
     console.log(navigation);*/
 
     return (
-        <View style={styles.view}>
+        <SafeAreaView style={styles.view}>
             <TouchableOpacity>
                 <Home />
             </TouchableOpacity>
@@ -35,16 +34,16 @@ const RailTabBar = ({state, descriptors, navigation}) => {
             <TouchableOpacity>
                 <Icon name="lightbulb-outline" size={25}/>
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
     view: {
         flexDirection: 'row',
-        height: 55,
+        height: 75,
         alignItems: 'center',
-        justifyContent: 'space-around'
+        justifyContent: 'space-around',
     },
     circleView: {
         // Attributes for inner circle
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
         borderColor: '#FFFFFF',
         // This is what pushes it about the top
         marginBottom: 25,
-        // Aligning the icon
+        // Aligning the icons
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',

@@ -2,7 +2,10 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet,SafeAreaView} from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
+/* Icons */
 import Home from '../assets/svg/home.svgx';
+import Apps from '../assets/svg/apps.svgx'
 
 const RailTabBar = ({state, descriptors, navigation}) => {
     /*
@@ -18,14 +21,14 @@ const RailTabBar = ({state, descriptors, navigation}) => {
     return (
         <SafeAreaView style={styles.view}>
             <TouchableOpacity>
-                <Home />
+                <Home size={25}/>
             </TouchableOpacity>
             <TouchableOpacity>
                 <Icon name="newspaper" size={25}/>
             </TouchableOpacity>
             <TouchableOpacity>
                 <View style={styles.circleView}>
-                    <Icon name="apps" size={25} color="white"/>
+                    <Apps size={25} fill="#FFFFFF"/>
                 </View>
             </TouchableOpacity>
             <TouchableOpacity>
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
         width: 55,
         height: 55,
         borderRadius: 55 / 2,
-        backgroundColor: '#FF9800',
+        backgroundColor: '#102027',
         // Attributes for outer circle
         borderWidth: 3,
         borderColor: '#FFFFFF',

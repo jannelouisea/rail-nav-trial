@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {View, Text, TouchableOpacity, StyleSheet,SafeAreaView} from 'react-native';
 import { MAIN_ROUTES, SECONDARY_ROUTES } from '../constants/ScreenMapping';
+import RBSheet from "react-native-raw-bottom-sheet";
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -9,15 +10,7 @@ import Home from '../assets/svg/home.svgx';
 import Apps from '../assets/svg/apps.svgx'
 
 const RailTabBar = ({state, descriptors, navigation}) => {
-    /*
-    console.log("state");
-    console.log(state);
-    console.log("===============");
-    console.log("descriptors");
-    console.log(descriptors);
-    console.log("===============");
-    console.log("navigation");
-    console.log(navigation);*/
+    const secondaryNavRef = useRef();
 
     return (
         <SafeAreaView style={styles.view}>
@@ -27,7 +20,7 @@ const RailTabBar = ({state, descriptors, navigation}) => {
             <TouchableOpacity  style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.NEWS)}}>
                 <Icon name="newspaper" size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity  style={styles.navButtons} activeOpacity={.8}>
+            <TouchableOpacity  style={styles.navButtons} activeOpacity={.8} onPress={() => {secondaryNavRef.current.open()}}>
                 <View style={styles.circleView}>
                     <Apps size={25} fill="#FFFFFF"/>
                 </View>
@@ -38,6 +31,22 @@ const RailTabBar = ({state, descriptors, navigation}) => {
             <TouchableOpacity  style={styles.navButtons} onPress={() => {navigation.navigate(MAIN_ROUTES.PROPOSALS)}}>
                 <Icon name="lightbulb-outline" size={25}/>
             </TouchableOpacity>
+
+            <RBSheet 
+                ref={secondaryNavRef}
+                closeOnDragDown={true}
+                customStyles={{
+                    container: {
+                        backgroundColor: "#102027",
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10
+                    }
+                }}
+            >
+                <View style={styles.secondaryNavView}>
+                    <Text>This is the secondary nav screen</Text>
+                </View>
+            </RBSheet>
         </SafeAreaView>
     );
 };

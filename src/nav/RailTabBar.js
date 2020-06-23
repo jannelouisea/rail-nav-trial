@@ -26,7 +26,7 @@ const RailTabBar = ({state, descriptors, navigation}) => {
             <TouchableOpacity>
                 <Icon name="newspaper" size={25}/>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity activeOpacity={.8}>
                 <View style={styles.circleView}>
                     <Apps size={25} fill="#FFFFFF"/>
                 </View>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         // Adding the shadow at the bottom
         shadowOffset: {width: 0, height: 5},
         shadowOpacity: .1,
-        shadowRadius: 3
+        shadowRadius: 3,
     }
 });
 

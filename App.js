@@ -12,6 +12,7 @@ import HomeScreen from './src/screens/home/HomeScreen';
 import NewsScreen from './src/screens/news/NewsScreen';
 import BillsScreen from './src/screens/bills/BillsScreen';
 import ProposalsScreen from './src/screens/proposals/ProposalsScreen';
+import BlankScreen from './src/screens/blank/BlankScreen';
 
 //const Root = createBottomTabNavigator();
 const MainTab = createBottomTabNavigator();
@@ -24,6 +25,7 @@ export default function App() {
         <MainTab.Screen name={MAIN_ROUTES.NEWS} component={NewsScreen}/>
         <MainTab.Screen name={MAIN_ROUTES.BILLS} component={BillsScreen}/>
         <MainTab.Screen name={MAIN_ROUTES.PROPOSALS} component={ProposalsScreen}/>
+        <MainTab.Screen name="Blank" component={BlankScreen}/>
       </MainTab.Navigator>
     </NavigationContainer>
   );

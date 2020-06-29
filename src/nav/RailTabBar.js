@@ -53,7 +53,7 @@ const RailTabBar = ({state, descriptors, navigation}) => {
                     <View style={styles.secondaryNavRow}>
                         <TouchableOpacity style={styles.secondaryNavButton}
                             onPress={() => {
-                                navigation.navigate(MAIN_ROUTES.HOME);
+                                navigation.navigate("Blank", {screenName: "Profile"});
                                 secondaryNavRef.current.close();
                             }}
                         >
@@ -62,13 +62,23 @@ const RailTabBar = ({state, descriptors, navigation}) => {
                             </View>
                             <Text style={{color: "#FFFFFF", paddingTop: 6}}>Profile</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.secondaryNavButton}>
+                        <TouchableOpacity style={styles.secondaryNavButton}
+                            onPress={() => {
+                                navigation.navigate("Blank", {screenName: "Community"});
+                                secondaryNavRef.current.close();
+                            }}
+                        >
                             <View style={{padding: 5, borderColor: '#62727B', borderWidth: 1, borderRadius: 20}}>
                                 <Community fill="#FFFFFF"/>
                             </View>
                             <Text style={{color: "#FFFFFF", paddingTop: 6}}>Community</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.secondaryNavButton}>
+                        <TouchableOpacity style={styles.secondaryNavButton}
+                            onPress={() => {
+                                navigation.navigate("Blank", {screenName: "Officials"});
+                                secondaryNavRef.current.close();
+                            }}
+                        >
                             <View style={{padding: 5, borderColor: '#62727B', borderWidth: 1, borderRadius: 20}}>
                                 <Officials fill="#FFFFFF"/>
                             </View>
@@ -76,19 +86,34 @@ const RailTabBar = ({state, descriptors, navigation}) => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.secondaryNavRow}>
-                        <TouchableOpacity style={styles.secondaryNavButton}>
+                        <TouchableOpacity style={styles.secondaryNavButton}
+                            onPress={() => {
+                                navigation.navigate("Blank", {screenName: "Notifications"});
+                                secondaryNavRef.current.close();
+                            }}
+                        >
                             <View style={{padding: 5, borderColor: '#62727B', borderWidth: 1, borderRadius: 20}}>
                                 <Notifications fill="#FFFFFF" />
                             </View>
                             <Text style={{color: "#FFFFFF", paddingTop: 6}}>Notifications</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.secondaryNavButton}>
+                        <TouchableOpacity style={styles.secondaryNavButton}
+                            onPress={() => {
+                                navigation.navigate("Blank", {screenName: "Settings"});
+                                secondaryNavRef.current.close();
+                            }}
+                        >
                             <View style={{padding: 5, borderColor: '#62727B', borderWidth: 1, borderRadius: 20}}>
                                 <Settings fill="#FFFFFF" />
                             </View>
                             <Text style={{color: "#FFFFFF", paddingTop: 6}}>Settings</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.secondaryNavButton}>
+                        <TouchableOpacity style={styles.secondaryNavButton}
+                            onPress={() => {
+                                navigation.navigate("Blank", {screenName: "Info"});
+                                secondaryNavRef.current.close();
+                            }}
+                        >
                             <View style={{padding: 5, borderColor: '#62727B', borderWidth: 1, borderRadius: 20}}>
                                 <Info fill="#FFFFFF" />
                             </View>

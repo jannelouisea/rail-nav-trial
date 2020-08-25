@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is the current folder structure
+=======
+Folder structure
+>>>>>>> 5ca3bfaa8860dbc6b4fe09524c79b4bab59a7591
 
 ```
 .
@@ -45,4 +49,8 @@ This is the current folder structure
     │   ├── bills-nav-stack.js
     │   └── (other navigators)
     └── App.js
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 5ca3bfaa8860dbc6b4fe09524c79b4bab59a7591
